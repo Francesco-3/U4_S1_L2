@@ -13,18 +13,23 @@
 */
 
 public class Ex_1 {
-    public static String stringaPariDispari(String s) {
-        return s;
+    public static boolean stringaPariDispari(String s) {
+        return s.length() % 2 == 0;
+    }
+
+    public static boolean annoBisestile(int anno) {
+        if (anno % 4 == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static void main(String[] args) {
-        String str = stringaPariDispari("Ciao");
-        int number = Integer.parseInt(str);
+        boolean str = stringaPariDispari("Ciao");
+        System.out.println("La stringa è pari? " + str);
 
-        if (number % 2 == 0) {
-            System.out.println("True and length is: " + number);
-        } else {
-            System.out.println("False and length is: " + number);
-        }
+        boolean anno = annoBisestile(1861);
+        System.out.println("L'anno è bisestile? " + anno);
     }
 }
